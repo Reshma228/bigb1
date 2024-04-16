@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bigbasket</title>
+    <style>
+        nav{
+            border: 2px solid transparent;
+            height: 10vh;
+            width: 98%;
+            display: flex; 
+            justify-content: center;  
+            gap: 2px;
+            background-color: white;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+        }
+        .a{
+            border: 2px solid transperant;
+            height: 100%;
+            width: 75%; 
+            display: flex;
+            align-items: center;
+          
+            
+          
+        }
+        .a img{
+            height: 50px;
+        }
+        .a input{
+            height: 6vh;
+            width: 50%;
+        }
+        .fa-magnifying-glass{
+            font-size: 12px;
+            position: relative;
+            left: 20px;
+            
+        }
+        .a span{
+            border: 2px solid transperant;
+            height: 5vh;
+            width: 15%;
+            font-size: 13px;
+            margin-left: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            background-color: rgba(128, 128, 128, 0.121);
+        }
+        .a p{
+            border: 2px solid transperant;
+            font-size: 12px;
+            height: 3vh;
+            width: 8%;
+            margin-left: 20px;
+            background-color: black;
+            color: white;
+           padding-left: 6px;
+            padding-bottom: 12px;
+        }
+        .a label{
+            position: relative;
+            left: 20px;
+        }
+        .ic{
+            border: 2px solid transperant;
+            height: 4vh;
+            width: 3%;
+           padding: 6px 5px 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 16px;
+            border-radius: 50%;
+            background-color: rgba(255, 0, 0, 0.128);
+        }
+        .fa-bag-shopping{
+            font-size: 12px;
+            
+            color:rgba(255, 0, 0, 0.555);
+           }
+           .b{
+            border: 2px solid transperant;
+            height: 10vh;
+            width: 100%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 58px;
+          
+        }
+        .b1{
+            border: 2px solid transperant;
+            height: 100%;
+            width: 60%; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            left: -10px;
+          
+        }
+        .b1 p{
+            border: 2px solid transperant;
+            font-size: 13px;
+            font-weight: 200;
+           
+        }
+        .b1 p:first-child{
+            border: 2px solid transperant;
+            height: 5vh;
+            width: 15%;
+            background-color: green;
+            color: white;
+            padding-left: 8px;
+            padding-bottom: 2px;
+        }
+        .b1 label{
+            font-size: 10px;
+        }
+        .c{
+            border: 2px solid transperant;
+            height: 10vh;
+            width: 100%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 80px;
+          
+        }
+        .c1{
+            
+            border: 2px solid transperant;
+            height: 100%;
+            width:73%; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            transition: .2s linear;
+           
+        }
+        .c1 img{
+            height: 35px;
+            width: 120px;
+            
+        }
+        .b2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+          left: 7px;
+          gap: 20px;
+            
+        }
+        .b2 img{
+            height: 20px;
+            width: 52px;  
+        }
+        .d{
+            border: 2px solid transperant;
+            height: 90vh;
+            width: 72%;
+            margin-left: 14%;
+            position: relative;
+          top: 97px;
+          background-color: rgba(128, 128, 128, 0.078);
+         
+          
+        }
+        .d1 h3{
+            position: relative;
+            left: 12px;
+        }
+        .d2{
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+          
+
+        }
+        .ba{
+            border: 2px solid transperant;
+            height: 75vh; 
+            width: 22%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 4px;
+            box-shadow: 0 0 5px gray;
+            background-color: white;
+            transition: .2s linear;
+          
+        }
+        .ba img{
+            border: 2px solid transperant;
+            height: 35%; 
+            width:99% ;
+            margin-top: 3px; 
+        }
+        .fre span{
+            color: rgba(0, 0, 0, 0.651);
+            position: relative;
+            top: 15px;
+            left: 5px;
+            font-size: 13px;
+        }
+        .fre label{
+            position: relative;
+            top: 15px;
+            left: 5px;
+            font-size: 14px;
+        }
+        select{
+            margin-top: 40px;
+            height: 4vh;
+            font-size: 12px;
+        }
+        select:last-child{
+            background-image: linear-gradient(45deg,white,rgb(176, 245, 154));
+           position: relative;
+           top: -12px;
+        }
+        .price{
+          margin-top: 10px;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }
+        .se select{
+            width: 100%;
+        }
+        .save{
+            border: 2px solid transperant;
+            display: flex;
+             margin-top: 17px;
+            align-items: center;
+            gap: 15px;
+        }
+        .save i{
+            border: 1px solid black;
+            height: 4vh;
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        .save span{
+            border: 2px solid red;
+            width: 90%;
+            height: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: red;
+        }
+        .save span:hover{
+            background-color: red;
+            color: white;
+        }
+   .bank{
+    border: 2px solid transperant;
+            width: 72%;
+            height: 40vh;
+            position: relative;
+            top: 120px;
+            left: 14%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+           padding: 5px;
+            gap: 10px;
+   }
+   .bank .of{
+    border: 2px solid transperant;
+    height: 110%;
+    width: 110%;
+    border-radius: 10px;
+    position: relative;
+        top: -20px;
+        box-shadow: 0 0 5px gray;
+        transition: .2s linear;
+   }
+      .of img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+       
+       
+      }  
+      .offers{
+        display: flex;
+            justify-content: center;
+          gap: 20px;
+      }
+      .bao{
+        font-size: 20px;
+        position: relative;
+        top: -20px;
+      }
+      .topo{
+    border: 2px solid transperant;
+            width: 72%;
+            height: 40vh;
+            position: relative;
+            top: 120px;
+            left: 14%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+           
+   }.to{
+    position: relative;
+            top: -15px;
+            font-size: 20px;
+            padding-left: 10px;
+            
+   }
+   .top{
+    border: 2px solid transperant;
+    width: 100%;
+            height: 30vh;
+            position: relative;
+            top: 6px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-left: 10px;
+            
+   }
+   .top .o{
+    border: 2px solid transperant;
+    width: 30%;
+            height: 30vh;
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            transition: .2s linear;
+   }
+    .o img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .veg{
+        margin-top: 15px;
+        
+    }
+    .you{
+        border: 2px solid transparent;
+            width: 72%;
+            height: 40vh;
+            position: relative; 
+            top: 135px;
+            left: 14%;
+            display: flex;
+            flex-direction: column;
+           
+  }
+    .hd{
+        padding-left: 10px;
+        font-size: 20px;
+    }
+    .flour{
+        border: 2px solid transparent;
+    width: 100%;
+            height: 30vh;
+            position: relative; 
+            top: 15px;
+            display: flex;
+            gap: 15px;
+            padding-left: 5px;
+          }
+         .flour .f{
+            border: 2px solid transparent;
+            width: 17%;
+            height: 55%;
+            box-shadow: 0 0 5px gray;
+            border-radius: 10px;
+            transition: .2s linear;
+          }
+          .f img{
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+          }
+          .bev{
+            position: relative;
+            top: -10px;
+          }
+     .sna{
+        margin-top: -100px;
+     }
+     .cle{
+        margin-top: 23px;
+     }
+     .hom{
+        margin-top: -65px;
+     }
+     .pic{
+        border: 2px solid transperant;
+        height: 50vh;
+        width: 71%;
+        margin-top: 70px;
+        margin-left: 15%;
+     }
+     .pic img{
+        height:100% ;
+        width: 100%;
+     }
+     .paar{
+        border: 2px solid transperant;
+        height: 50vh;
+        width: 71%;
+        margin-top: 0px;
+        margin-left: 15%;
+     }
+     .paar p{
+        font-size: 13px;
+        color: rgb(128, 128, 128);
+     }
+     footer{
+        border: 2px solid transparent;
+        height: 180vh;
+        width: 100%;
+        margin-top: 18%;
+        display: flex;
+        justify-content: center;
+       flex-direction: column;
+        background-color: black;
+     }
+     .fir{
+        border: 2px solid transperant;
+        height: 75vh;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       margin-top: 2px;
+       margin-left: 13%;
+       
+        border-bottom: 1px dotted white;
+       
+     }
+     .fi{
+        border: 2px solid transperant;
+        height: 70vh;
+        width: 20%;
+        color: white;
+        font-size: 13px;
+       
+        
+       
+     }
+     .sec5{
+        position: relative;
+        top: -60px;
+     }
+     .fi img{
+        height: 40px;
+        width: 100px;
+        margin-top: 2px;
+        margin-left: 25px;
+     }
+     .addr {
+       border: 2px solid transparent;
+       height: 35%;
+       width: 80%;
+       margin-left: 13%;
+       position: relative;
+       top: -50px;
+      
+        margin-top: 50px;
+        border-bottom: 1px dotted white;
+     }
+   
+     .addo{
+        color: white;
+        font-size: 12px;
+     }
+     .last{
+        border: 2px solid transperant;
+        height: 12%;
+       width: 80%;
+       margin-left: 13%;
+       position: relative;
+       top: -40px;
+       display: flex;
+        justify-content: center;
+     gap: 10px;
+     }
+     .l{
+        border: 2px solid transperant;
+        width: 25%;
+        height: 120%;
+        font-size: 12px;
+     }
+     .last img{
+        height: 100%;
+        width: 60%;
+     }
+     
+     
+     .boox{
+        border: 2px solid transparent;
+        height: 5vh;
+        width: 40%;
+        position: relative;
+        top: -6px;
+        left: 13%;
+     }
+     .boox p{
+        color: white;
+        position: relative;
+        top: -16px;
+     }
+     .ba:hover{
+        transform: scale(1.1);
+     }
+     .of:hover{
+        transform: scale(1.1);
+     }
+     .o:hover{
+        transform: scale(1.1);
+     }
+     .f:hover{
+        transform: scale(1.1);
+     }
+     .b1 a{
+        text-decoration: none;
+        color: black;
+        position: relative;
+     }
+     .b1 a:after{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      border: 1px solid rgba(255, 0, 0, 0.553);
+      width: 0%;
+      transition: .3s linear;
+     }
+     .b1 a:hover:after{
+        
+        width: 100%;
+     }
+     .b1 a:hover{
+        color: rgba(255, 0, 0, 0.66);
+     }
+     .c1 img:hover{
+        transform:scale(1.1) ;
+     }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="icon" type="image/x-icon" href="./images/bigbasket-logo.jpg">
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="a">
+            <img src="./images/logo.jpeg">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;search for products">
+            
+            <span>
+               <i class="fa-solid fa-location-dot"></i>
+               Select Location</span> 
+               
+                   <p>Login/Sign <label>up</label></p>
+                   <div class="ic">
+                       <i class="fa-solid fa-bag-shopping"></i>
+                   </div>
+           </div>
+               </nav>
+               <div class="b">
+           <div class="b1">
+           <p><label>Shop by</label><br> category</p>
+           <a href="">Exotic Fruits & V...</a>
+           <a href="">Tea</a>
+          <a href="">Ghee</a>
+          <a href="">Nandini</a>
+           <a href="">>></a>
+           
+           </div>
+           <div class="b2">
+               <img src="./images/8.webp">
+           <img src="./images/9.png">
+           </div>
+               </div>
+               <div class="c">
+               <div class="c1">
+               <img src="./images/1.webp">
+               <img src="./images/2.webp">
+               <img src="./images/3.webp">
+               <img src="./images/4.webp">
+               <img src="./images/5.webp">
+               <img src="./images/6.webp">
+               </div>
+               </div>
+               <div class="d">
+                   <div class="d1">
+                  <h3>My Smart Basket</h3>
+                   </div>
+                   <div class="d2">
+               <div class="ba">
+              <img src="./images/10.webp">
+              <div class="fre">
+               <span>Fresho</span><br>
+               <label>Ginger(Loose)</label>
+                
+              </div>
+             
+               <select >
+                   <option>1Kg</option>
+                   <option>2Kg</option>
+                   <option>3Kg</option>
+                   <option>4Kg</option>
+                </select>
+                <div class="price">
+                   <strong>$150</strong><s>249.2</s>
+                </div>
+              <div class="se">
+               <select>
+                   <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+                  </select>
+              </div>
+                 <div class="save">
+                   <i class="fa-regular fa-bookmark"></i>
+                   <span>Add</span>
+                 </div>
+               </div>
+            
+                  <div class="ba">
+                   <img src="./images/11.webp"> 
+                   <div class="fre">
+                       <span>Fresho</span><br>
+                       <label>Lemon(Loose)</label>
+                        
+                      </div>
+                     
+                       <select >
+                           <option>1Kg</option>
+                           <option>2Kg</option>
+                           <option>3Kg</option>
+                           <option>4Kg</option>
+                        </select>
+                        <div class="price">
+                           <strong>$225</strong><s>449.2</s>
+                        </div>
+                      <div class="se">
+                       <select>
+                           <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+                          </select>
+                      </div>
+                         <div class="save">
+                           <i class="fa-regular fa-bookmark"></i>
+                           <span>Add</span>
+                         </div>
+               </div>
+           
+           
+           
+           
+           
+               <div class="ba">
+                   <img src="./images/12.webp">   
+                   <div class="fre">
+                       <span>Fresho</span><br>
+                       <label>Onion</label>
+                        
+                      </div>
+                     
+                       <select >
+                           <option>1Kg</option>
+                           <option>2Kg</option>
+                           <option>3Kg</option>
+                           <option>4Kg</option>
+                        </select>
+                        <div class="price">
+                           <strong>$180</strong><s>249.2</s>
+                        </div>
+                      <div class="se">
+                       <select>
+                           <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+                          </select>
+                      </div>
+                         <div class="save">
+                           <i class="fa-regular fa-bookmark"></i>
+                           <span>Add</span>
+                         </div>
+               </div>
+               <div class="ba">
+                   <img src="./images/13.webp">     
+               
+                   <div class="fre">
+                       <span>Fresho</span><br>
+                       <label>Tomato-Local</label>
+                        
+                      </div>
+                     
+                       <select >
+                           <option>1Kg</option>
+                           <option>2Kg</option>
+                           <option>3Kg</option>
+                           <option>4Kg</option>
+                        </select>
+                        <div class="price">
+                           <strong>$43</strong><s>117.2</s>
+                        </div>
+                      <div class="se">
+                       <select>
+                           <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+                          </select>
+                      </div>
+                         <div class="save">
+                           <i class="fa-regular fa-bookmark"></i>
+                           <span>Add</span>
+                         </div>
+               </div>
+                      
+    </section>
+   <section class="1">
+    
+    <div class="bank"> 
+        <div class="bao">
+            <b>Bank Offers</b>
+        </div>
+   <div class="offers">
+    <div class="of">
+        <img src="./images/b1.webp">  
+      </div>
+      <div class="of">
+          <img src="./images/b2.webp">  
+      </div>
+      <div class="of">
+          <img src="./images/b3.webp"> 
+      </div>
+      <div class="of">
+          <img src="./images/b4.webp">  
+      </div>
+   </div>
+    </div> 
+   </section>
+
+
+<section class="2">
+    <div class="d">
+        <div class="d1">
+       <h3>Best Sellers</h3>
+        </div>
+        <div class="d2">
+    <div class="ba">
+   <img src="./images/p1.webp">
+   <div class="fre">
+    <span>Pampers</span><br>
+    <label>Baby Wipes-With Aloe</label>
+     
+   </div>
+  
+    <select >
+        <option>72 pcs - (pack of 2)</option>
+        <option>102 pcs - (pack of 2)</option>
+        <option>52 pcs - (pack of 3)</option>
+        <option>22 pcs - (pack of 4)</option>
+     </select>
+     <div class="price">
+        <strong>$150</strong><s>249.2</s>
+     </div>
+   <div class="se">
+    <select>
+        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+       </select>
+   </div>
+      <div class="save">
+        <i class="fa-regular fa-bookmark"></i>
+        <span>Add</span>
+      </div>
+    </div>
+ 
+       <div class="ba">
+        <img src="./images/p2.webp"> 
+        <div class="fre">
+            <span>Littles</span><br>
+            <label>Baby Wipes-With Aloevera</label>
+             
+           </div>
+          
+           <select >
+            <option>72 pcs - (pack of 2)</option>
+            <option>102 pcs - (pack of 2)</option>
+            <option>52 pcs - (pack of 3)</option>
+            <option>22 pcs - (pack of 4)</option>
+         </select>
+             <div class="price">
+                <strong>$225</strong><s>449.2</s>
+             </div>
+           <div class="se">
+            <select>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+               </select>
+           </div>
+              <div class="save">
+                <i class="fa-regular fa-bookmark"></i>
+                <span>Add</span>
+              </div>
+    </div>
+
+
+
+
+
+    <div class="ba">
+        <img src="./images/p3.webp"> 
+        <div class="fre">
+            <span>Bigbasket</span><br>
+            <label>Baby Wipes-With</label>
+             
+           </div>
+          
+           <select >
+            <option>72 pcs - (pack of 2)</option>
+            <option>102 pcs - (pack of 2)</option>
+            <option>52 pcs - (pack of 3)</option>
+            <option>22 pcs - (pack of 4)</option>
+         </select>
+             <div class="price">
+                <strong>$180</strong><s>249.2</s>
+             </div>
+           <div class="se">
+            <select>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+               </select>
+           </div>
+              <div class="save">
+                <i class="fa-regular fa-bookmark"></i>
+                <span>Add</span>
+              </div>
+    </div>
+    <div class="ba">
+        <img src="./images/p4.webp">    
+    
+        <div class="fre">
+            <span>Bigbasket</span><br>
+            <label>Baby Wipes</label>
+             
+           </div>
+          
+           <select >
+            <option>72 pcs - (pack of 2)</option>
+            <option>102 pcs - (pack of 2)</option>
+            <option>52 pcs - (pack of 3)</option>
+            <option>22 pcs - (pack of 4)</option>
+         </select>
+             <div class="price">
+                <strong>$43</strong><s>117.2</s>
+             </div>
+           <div class="se">
+            <select>
+                <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Har Din Sasta</option>
+               </select>
+           </div>
+              <div class="save">
+                <i class="fa-regular fa-bookmark"></i>
+                <span>Add</span>
+              </div>
+    </div>
+</section>
+
+<section class="3">
+   <div class="topo">
+    <div class="to">
+        <b>Top Offers</b>
+    </div>
+    <div class="top">
+        <div class="o">
+        <img src="./images/t1.webp">
+        </div>
+        <div class="o">
+            <img src="./images/t2.webp">  
+        </div>
+        <div class="o">
+            <img src="./images/t3.webp"> 
+        </div>
+        <div class="o">
+            <img src="./images/t4.webp">   
+        </div>
+    </div>
+   </div>
+</section>
+<section class="4">
+    <div class="topo veg">
+     <div class="to">
+         <b>Fruits and Vegtables</b>
+     </div>
+     <div class="top">
+         <div class="o">
+         <img src="./images/v1.webp">
+         </div>
+         <div class="o">
+             <img src="./images/v2.webp">  
+         </div>
+         <div class="o">
+             <img src="./images/v3.webp"> 
+         </div>
+         <div class="o">
+             <img src="./images/v4.webp">   
+         </div>
+     </div>
+    </div>
+ </section>
+ 
+ <section class="6 bev">
+    <div class="you">
+        <div class="hd">
+         <b>Your Beverages</b>
+        </div>
+        <div class="flour">
+            <div class="f">
+           <img src="./images/r1.webp">
+            </div>
+            <div class="f">
+                <img src="./images/r2.webp">   
+            </div>
+             <div class="f">
+                <img src="./images/r3.webp">     
+            </div> 
+            <div class="f">
+                <img src="./images/r4.webp">   
+            </div>
+             <div class="f">
+                <img src="./images/r5.webp">   
+            </div>
+            <div class="f">
+                <img src="./images/r6.webp">     
+            </div>
+        </div>
+    </div>
+ </section>
+ <section class="5 sec5">
+    <div class="you">
+        <div class="hd">
+         <b>Your Daily Staples</b>
+        </div>
+        <div class="flour">
+            <div class="f zo">
+           <img src="./images/f1.webp">
+            </div>
+            <div class="f zo">
+                <img src="./images/f2.webp">   
+            </div>
+             <div class="f zo">
+                <img src="./images/f3.webp">     
+            </div> 
+            <div class="f zo">
+                <img src="./images/f4.webp">   
+            </div>
+             <div class="f zo">
+                <img src="./images/f5.webp">   
+            </div>
+            <div class="f zo">
+                <img src="./images/f6.webp">     
+            </div>
+        </div>
+    </div>
+ </section>
+ <section class="7">
+    <div class="topo sna">
+     <div class="to">
+         <b>Snacks Store</b>
+     </div>
+     <div class="top">
+         <div class="o">
+         <img src="./images/sn1.webp">
+         </div>
+         <div class="o">
+             <img src="./images/sn2.webp">  
+         </div>
+         <div class="o">
+             <img src="./images/sn3.webp"> 
+         </div>
+         <div class="o">
+             <img src="./images/sn4.webp">  
+         </div>
+     </div>
+    </div>
+ </section>
+ <section class="8">
+    <div class="topo cle">
+     <div class="to">
+         <b>Cleaning & Household</b>
+     </div>
+     <div class="top">
+         <div class="o">
+         <img src="./images/cl1.webp">
+         </div>
+         <div class="o">
+             <img src="./images/cl2.webp">  
+         </div>
+         <div class="o">
+             <img src="./images/cl3.webp"> 
+         </div>
+         <div class="o">
+             <img src="./images/cl4.webp">  
+         </div>
+     </div>
+    </div>
+ </section>
+ <section class="9">
+    <div class="you">
+        <div class="hd">
+         <b>Beauty and Hygiene</b>
+        </div>
+        <div class="flour">
+            <div class="f">
+           <img src="./images/be1.webp">
+            </div>
+            <div class="f">
+                <img src="./images/be2.webp">   
+            </div>
+             <div class="f">
+                <img src="./images/be3.webp">     
+            </div> 
+            <div class="f">
+                <img src="./images/be4.webp">   
+            </div>
+             <div class="f">
+                <img src="./images/be5.webp">   
+            </div>
+            <div class="f">
+                <img src="./images/be6.webp">     
+            </div>
+        </div>
+    </div>
+ </section>
+ <section class="10">
+    <div class="you hom">
+        <div class="hd">
+         <b>Home and Kitchen</b>
+        </div>
+        <div class="flour">
+            <div class="f">
+           <img src="./images/h1.webp">
+            </div>
+            <div class="f">
+                <img src="./images/h2.webp">   
+            </div>
+             <div class="f">
+                <img src="./images/h3.webp">     
+            </div> 
+            <div class="f">
+                <img src="./images/h4.webp">   
+            </div>
+             <div class="f">
+                <img src="./images/h5.webp">   
+            </div>
+            <div class="f">
+                <img src="./images/h6.webp">     
+            </div>
+        </div>
+    </div>
+ </section>
+ <section class="11">
+    <div class="pic">
+        <img src="./images/fot.webp">
+    </div>
+ </section>
+ <section class="12">
+    <div class="paar">
+        <h4>Bigbasket – online grocery store</h4>
+    <div class="par">
+        <p>Did you ever imagine that the freshest of fruits and vegetables, top-quality pulses and food grains, dairy products, and hund
+            transperants of branded items could be handpicked 
+            and delivered to your home, all at the click of a button? In today's fast-paced world, bigbasket.com, India's pioneering online grocery store, continues to bring a staggering array of over 40,000 
+            products from more than 1,000 brands
+             to the doorsteps of over 10 million satisfied customers. From essential household cleaning products to the latest beauty and makeup trends, bigbasket
+             remains your one-stop shop for daily needs.</p>
+    
+
+    <p>In these times, we've eliminated the stress associated with shopping for daily essentials. You can now effortlessly order all your household products and groceries online. Plus, the added convenience of finding all your requirements at a single source, coupled with substantial savings, demonstrates that bigbasket, India's largest online supermarket, has transformed the way we shop for groceries. Online grocery shopping has become second nature. And when it comes to freshness, whether it's fruits and vegetables or dairy and meat, we've got you covered! Easily obtain fresh eggs,
+         meat, fish, and more with just a few clicks.</p>
+            </div>
+<p>We now serve 300+ cities and towns across India and ensure swift delivery times, guaranteeing that all your groceries, 
+    snacks and branded foods reach you on time.</p>
+    <p>
+        Slotted Delivery: Choose the most convenient delivery slot to receive your groceries, ranging from early morning delivery for early birds to late-night delivery for those on the night shift.
+         bigbasket caters to every schedule.
+    </p>
+
+    <p>Instant delivery from bbnow: In response to the ever-increasing demand for 
+        convenience, bbnow by bigbasket offers lightning-fast grocery delivery, ensuring that your essentials are at your doorstep within 15-30 minutes. Our quick delivery service has revolutionized the way you shop for groceries. Choose from 5000+ grocery essentials. 
+        bbnow is available only in select cities.</p>
+        <p>Whether it's a last-minute dinner party or you simply need something 
+            urgently, we've got you covered. This service exemplifies our commitment to providing you with not just the widest range of 
+            products but also the fastest and most efficient shopping experience, making bigbasket.com the go-to destination 
+            for all your immediate grocery needs.</p>
+    </div>
+ </section>
+
+ <footer>
+    <div class="fir">
+        <div class="fi">
+            <p>Bigbasket</p>
+            <p>About Us</p>
+           <p> Become A bigbasket Rider</p>
+           <p> In News</p>
+            <p>Green bigbasket</p>
+           <p> Privacy Policy</p>
+            <p>Affiliate</p>
+            <p>Terms and Conditions</p>
+            <p>Careers At bigbasket</p>
+           <p> bb Instant</p>
+           <p> bb Daily</p>
+            <p>bb Blog</p>
+            <p>bbnow</p>
+        </div>
+        <div class="fi">
+            Help
+         <p>FAQs</p>
+           <p>Contact Us</p>
+          <p>bb Wallet FAQs</p>
+       <p>bb Wallet T&Cs</p>
+          <p>Vendor Connect</p>
+        </div>
+        <div class="fi">
+          <img src="./images/bb.png">  
+          <div class="fis">
+            <img src="./images/go.png">
+          <img src="./images/ap.png">
+          </div>  
+          <img src="./images/ic.png"> 
+
+        </div>
+    </div>
+     <div class="addr" style="color: white;">
+        <center><p>Cities We Serve</p></center>
+        <div class="addo">
+            Srirangapatna
+|
+Jashpur
+|
+North Paravur
+|
+Pratapgarh District
+|
+Guntakal
+|
+Muzaffarnagar District
+|
+Meerut District
+|
+Ludhiana District
+|
+Hooghly District
+|
+Gonda District
+|
+Fatehgarh Sahib District
+|
+Baghpat District
+|
+Amroha District
+|
+Mahabubnagar
+|
+Korba
+|
+Varanasi
+|
+Kanakapura
+|
+Khurai
+|
+Raisen
+|
+Gondia
+|
+Rahatgarh
+|
+Bhiwadi
+|
+Goa
+|
+Bahadurgarh
+|
+Raichur
+|
+Sindudurg
+|
+Sangareddy
+|
+Kurnool
+|
+Jadcherla
+|
+Muzaffarpur
+|
+JAGANNATHPRASAD
+|
+Hubli
+|
+Prakasam
+|
+Nalgonda
+|
+Karnal
+|
+Panipat
+|
+Rohtak
+|
+Renigunta
+|
+Patiala
+|
+Trichy
+|Prakasam District
+|
+Haridwar
+|
+Vinukonda
+|
+Kotagiri
+|
+Muthukulathur
+|
+Pathapatnam
+|
+Haripal
+|
+Kodumudi
+|
+Sivakasi
+|
+Pudukkottai
+|
+Narsipatnam
+|
+Narasannapeta
+|
+Kurupam
+|
+Pushpavanam
+|
+Chodavaram
+|
+Gudalur
+|
+Pennadam
+|
+Addateegala
+|
+Chirala
+|
+Yerragonda Palem
+|
+Kukanoor
+|
+Kushalnagar
+|
+Holenarasipur
+|
+Madakasira
+|
+Kavali
+|
+Eedu
+|
+Bagalkot
+|
+Mahalingpur
+|
+Humnabad
+|
+Yaragatti
+|
+Palani
+|
+Chilakaluripet
+|
+Chikkamagalur
+|
+Narayanpet
+|
+Jannaram
+|
+Rayaparthi
+|
+Panchkula
+|
+Metpally
+|
+Kodad
+|
+Mahadevpur
+|
+Rudrangi
+|
+Lunglei
+|
+Narmetta
+|
+Yellareddy
+|
+Bhangar
+|
+Pattukkottai
+|
+Aluva
+|
+Kayamkulam
+|
+Ezhupunna
+|
+Pangodu
+|
+Attingal
+|
+Edappal
+|
+Cherpulassery
+|
+chungatra
+|
+Koothattukulam
+|
+Manjeshwar
+|
+Choutuppal
+|
+Ladakh
+|
+Mananthavadi
+|
+Thodupuzha
+|
+Kattappana
+|
+Vadakara
+|
+Kuthuparamba
+|
+Sonipat
+|
+Thamarassery
+|
+Mundakayam
+|
+East Kameng
+|
+Mogullapally
+|
+East Garo Hills
+|
+Memari
+|
+Bolpur
+|
+Bangaon
+|
+Habra
+|
+Tamluk
+|
+Basirhat
+|
+Barakar
+|
+Chittaranjan
+|
+Gohana
+|
+Amritsar
+|
+West Kameng
+|
+West Khasi Hills
+|
+West Sikkim
+|
+Martur
+|
+West Tripura
+|
+Allagadda
+|
+Kittur
+|
+Motebeennura
+|
+Haveri
+|
+Kalghatgi
+|
+Sathupally
+|
+Harihara
+|
+Gadag
+|
+Haliyal
+|
+KHALARI-JR
+|
+Katol
+|
+Kendujhar
+|
+KENDRAPARA
+|
+Kawardha
+|
+Karimganj
+|
+Karbi Anglong
+|
+Kanker
+|
+Khergam
+|
+Masrakh
+|
+Bakhtiarpur
+|
+Hassan
+|
+Arambag
+|
+Baripada
+|
+Soro
+|
+Shadnagar
+|
+Bhongir
+|
+Kazipet
+|
+Athani
+|
+Vyara
+|
+CHHENDIPADA
+|
+CHHAPRA
+|
+Chatra
+|
+Changlang
+|
+Howrah
+|
+Hooghly
+|
+HINJILICUT
+|
+CHIKITI
+|
+Hosanagar
+|
+Malavalli
+|
+IMAMGANJ
+|
+ILIPUR
+|
+Koratagere
+|
+Magadi
+|
+Madikeri
+|
+Dabaspete
+|
+South Tripura
+|
+SULTANGANJ
+|
+South Garo Hills
+|
+South Sikkim
+|
+SURAJGARHA
+|
+Surguja
+|
+Sundergarh
+|
+Supaul
+|
+SWARUPNAGAR
+|
+Thoubal
+|
+Shorapur
+|
+Afzalpur
+|
+Chincholi
+|
+Dimapur
+|
+Jamkhandi
+|
+Sullia
+|
+Assaigoli
+|
+Virajpet
+|
+Pandua
+|
+Koppal
+|
+Jamuria
+|
+Khairabad
+|
+Byndoor
+|
+Vaidpura
+|
+Amalapuram
+|
+Addanki
+|
+Yavatmal
+|
+Wardha
+|
+Naharlagun
+|
+Ranebennur
+|
+Shiggaon
+|
+Savadatti
+|
+Sullurupeta
+|
+Makrana
+|
+Kuchaman City
+|
+Warora
+|
+RUNNISAIDPUR
+|
+RUNNISAIDPUR
+|
+Udham-Singh-Nagar
+|
+Nellore
+|
+Ambala
+|
+Agra
+|
+Ramgarh
+|
+Sircilla District
+|
+South 24 Parganas District
+|
+Sultanpur District
+|
+Madanpur
+|
+Faridabad
+|
+Raipur
+|
+Saiha
+|
+Saharsa
+|
+Malur
+|
+Hardoi
+|
+Darbhanga
+|
+Gaya
+|
+Motihari
+|
+Angul
+|
+Chhindwara
+|
+Ganjam
+|
+Bassi
+|
+Hindaun
+|
+Lalsot
+|
+Karauli
+|
+Dausa
+|
+Saoner
+|
+Gangapur City
+|
+Chandrapur
+|
+KAMAKHYANAGAR
+|
+KALYANI
+|
+Kandhamal
+|
+Kamrup
+|
+Amaravathi
+|
+Gwalior
+|
+Rajkot
+|
+Allahabad
+|
+Bareilly
+|
+Jodhpur
+|
+Palakkad
+|
+Palwal
+|
+Kalinga Nagar
+|
+Chinhat
+|
+Ottapidaram
+|
+Sriperumbudur
+|
+Thuckalay
+|
+Mayiladuthurai
+|
+Vilathikulam
+|
+llikkad|Neyyattinkara|Haripad|Shahabad Markanda|Bhagpat|Srinaga|
+        </div>
+     </div>
+     <div class="last">
+        <div class="l">
+            <img src="./images/x1.png">
+        </div>
+        <div class="l">
+            <img src="./images/x2.png">
+        </div>
+        <div class="l">
+            <img src="./images/x3.png">
+        </div>
+        <div class="l">
+            <img src="./images/x4.png">
+        </div>
+        <div class="l">
+            <img src="./images/x5.png">
+        </div>
+        <div class="l">
+            <img src="./images/x6.png">
+        </div>
+        
+     </div>
+     <div class="li">
+        <p>Copyright © 2023-2025 Supermarket Grocery Supplies Pvt Ltd</p>
+    </div>
+    <div class="boox">
+        <p>Powered By @<b>Reshma Shaik</b></p>
+    </div>
+ </footer>
+</body>
+</html>
